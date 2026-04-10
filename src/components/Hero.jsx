@@ -49,43 +49,52 @@ export default function Hero() {
             <div className="relative lg:pl-6">
               <div className="absolute inset-x-10 top-8 h-40 rounded-full bg-accent/10 blur-3xl" />
               <div className="animate-float rounded-[2rem] border border-white/80 bg-white/85 p-4 shadow-soft backdrop-blur-xl">
-                <div className="rounded-[1.75rem] bg-[linear-gradient(180deg,_#112033_0%,_#0f172a_100%)] p-8 text-white sm:p-10">
-                  <div className="mb-8 flex items-center gap-4">
+                <div className="rounded-[1.75rem] border border-slate-200/70 bg-[linear-gradient(180deg,_#f4f8fb_0%,_#edf3f7_100%)] p-7 text-ink sm:p-8">
+                  <div className="flex items-center gap-4">
                     <img
                       src={profileImage}
                       alt={`${portfolio.name} portrait`}
-                      className="h-20 w-20 rounded-[1.4rem] object-cover ring-2 ring-white/15"
+                      className="h-20 w-20 rounded-[1.35rem] object-cover ring-2 ring-white shadow-card"
                     />
                     <div>
-                      <p className="text-sm uppercase tracking-[0.3em] text-teal-200">Professional focus</p>
-                      <p className="mt-2 text-base font-semibold text-white">{portfolio.name}</p>
-                      <p className="mt-1 text-sm text-slate-300">Business analysis, reporting, and finance data solutions</p>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                    <p className="text-sm uppercase tracking-[0.3em] text-teal-200">Profile snapshot</p>
-                    <span className="rounded-full border border-white/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-slate-300">
-                      Strategy + analysis
-                    </span>
-                  </div>
-
-                  <div className="mt-10 space-y-6">
-                    <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5">
-                      <p className="text-sm uppercase tracking-[0.24em] text-slate-400">Core value</p>
-                      <p className="mt-3 text-base leading-7 text-slate-200">
-                        Translating data into reporting clarity, better processes, and decision-ready insight.
+                      <p className="text-sm uppercase tracking-[0.3em] text-accent">Professional focus</p>
+                      <p className="mt-2 text-lg font-semibold text-ink">{portfolio.name}</p>
+                      <p className="mt-1 text-sm leading-6 text-slate-600">
+                        Business analysis, reporting, and finance data solutions
                       </p>
                     </div>
-                    <div className="grid gap-4 sm:grid-cols-2">
-                      <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5">
-                        <p className="text-sm uppercase tracking-[0.22em] text-slate-400">Focus areas</p>
-                        <p className="mt-3 text-base leading-7 text-slate-200">Analytics, reporting, automation, and business support.</p>
-                      </div>
-                      <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5">
-                        <p className="text-sm uppercase tracking-[0.22em] text-slate-400">Approach</p>
-                        <p className="mt-3 text-base leading-7 text-slate-200">Structured, practical, and aligned with stakeholder needs.</p>
-                      </div>
+                  </div>
+
+                  <div className="mt-8 rounded-[1.5rem] border border-slate-200/80 bg-white/85 p-5 shadow-card">
+                    <div className="flex flex-wrap items-center gap-3">
+                      <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+                        Strategy + analysis
+                      </span>
+                      <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-600">
+                        Finance reporting
+                      </span>
+                      <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-600">
+                        Data validation
+                      </span>
+                    </div>
+
+                    <p className="mt-5 text-base leading-7 text-slate-600">
+                      I bring a structured, business-minded approach to reporting, process improvement, and financial data analysis.
+                    </p>
+                  </div>
+
+                  <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                    <div className="rounded-[1.4rem] border border-slate-200/80 bg-white/80 p-5">
+                      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">Focus areas</p>
+                      <p className="mt-3 text-base leading-7 text-slate-600">
+                        Analytics, reporting automation, business support, and dashboard development.
+                      </p>
+                    </div>
+                    <div className="rounded-[1.4rem] border border-slate-200/80 bg-white/80 p-5">
+                      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">Approach</p>
+                      <p className="mt-3 text-base leading-7 text-slate-600">
+                        Practical, stakeholder-focused, and grounded in clarity, accuracy, and usability.
+                      </p>
                     </div>
                   </div>
                 </div>
