@@ -38,3 +38,21 @@ To build the site:
 ```bash
 ./build-local.sh
 ```
+
+## Deploy to GitHub Pages
+
+This repo is set up to deploy to:
+
+`https://github.com/Nanadwuma/nanaportfolio`
+
+Run:
+
+```bash
+npm run deploy
+```
+
+If you are using the bundled local Node runtime on this machine, run:
+
+```bash
+PATH="$(pwd)/.local/node-v24.14.1-darwin-arm64/bin:$PATH" npm run deploy
+```

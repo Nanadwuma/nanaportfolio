@@ -9,17 +9,19 @@ export default function PageLayout({ children }) {
   const location = useLocation();
 
   useEffect(() => {
-    if (!location.hash) {
+    const sectionId = new URLSearchParams(location.search).get('section');
+
+    if (!sectionId) {
       window.scrollTo({ top: 0, behavior: 'auto' });
       return;
     }
 
-    const element = document.querySelector(location.hash);
+    const element = document.getElementById(sectionId);
 
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-  }, [location.hash, location.pathname]);
+  }, [location.pathname, location.search]);
 
   return (
     <div className="min-h-screen bg-[linear-gradient(180deg,_#fbfcfd_0%,_#f3f7f9_40%,_#f8fafc_100%)] text-ink">

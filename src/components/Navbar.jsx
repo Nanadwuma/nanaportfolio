@@ -22,7 +22,7 @@ export default function Navbar() {
   }, [location.pathname]);
 
   const closeMenu = () => setIsOpen(false);
-  const homeSectionHref = (sectionId) => (sectionId === 'home' ? '/' : `/#${sectionId}`);
+  const homeSectionHref = (sectionId) => (sectionId === 'home' ? '/' : `/?section=${sectionId}`);
 
   return (
     <header className="sticky top-0 z-50 px-4 pt-4 sm:px-6">
