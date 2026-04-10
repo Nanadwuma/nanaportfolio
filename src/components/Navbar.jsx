@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { navLinks, portfolio } from '../data/portfolio';
 
@@ -15,6 +15,8 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isProjectsOpen, setIsProjectsOpen] = useState(false);
   const [isMobileProjectsOpen, setIsMobileProjectsOpen] = useState(false);
+  const desktopProjectsRef = useRef(null);
+  const mobileNavRef = useRef(null);
   const location = useLocation();
   const projectLinks = portfolio.projectPage.projects.map((project) => ({
     label: project.title,
@@ -35,6 +37,33 @@ export default function Navbar() {
     setIsProjectsOpen(false);
     setIsMobileProjectsOpen(false);
   }, [location.pathname, location.search]);
+
+  useEffect(() => {
+    const handlePointerDown = (event) => {
+      if (desktopProjectsRef.current && !desktopProjectsRef.current.contains(event.target)) {
+        setIsProjectsOpen(false);
+      }
+
+      if (mobileNavRef.current && !mobileNavRef.current.contains(event.target)) {
+        setIsMobileProjectsOpen(false);
+      }
+    };
+
+    const handleEscape = (event) => {
+      if (event.key === 'Escape') {
+        setIsProjectsOpen(false);
+        setIsMobileProjectsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handlePointerDown);
+    document.addEventListener('keydown', handleEscape);
+
+    return () => {
+      document.removeEventListener('mousedown', handlePointerDown);
+      document.removeEventListener('keydown', handleEscape);
+    };
+  }, []);
 
   const closeMenu = () => {
     setIsOpen(false);
@@ -70,10 +99,10 @@ export default function Navbar() {
         <div className="hidden items-center gap-6 lg:flex">
           {navLinks.map((link) =>
             link.label === 'Projects' ? (
-              <div key={link.label} className="relative">
+              <div key={link.label} ref={desktopProjectsRef} className="relative">
                 <button
                   type="button"
-                  className="interactive-link inline-flex items-center gap-2 rounded-full text-sm font-semibold text-slate-600"
+                  className="interactive-link inline-flex items-center gap-2 rounded-full px-1 text-sm font-semibold text-slate-600"
                   onClick={() => setIsProjectsOpen((current) => !current)}
                   aria-expanded={isProjectsOpen}
                   aria-controls="projects-dropdown"
@@ -85,12 +114,13 @@ export default function Navbar() {
                 {isProjectsOpen && (
                   <div
                     id="projects-dropdown"
-                    className="absolute right-0 top-11 z-50 w-80 rounded-3xl border border-slate-200/90 bg-white/98 p-3 shadow-soft backdrop-blur"
+                    className="absolute left-1/2 top-full z-[60] mt-3 w-64 -translate-x-1/2 rounded-2xl border border-slate-200/90 bg-white/97 p-2 shadow-soft backdrop-blur-xl"
                   >
-                    <div className="space-y-2">
+                    <div className="absolute left-1/2 top-0 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rotate-45 border-l border-t border-slate-200/90 bg-white/97" />
+                    <div className="relative space-y-1">
                       <Link
                         to="/projects"
-                        className="block rounded-2xl px-4 py-3 text-sm font-semibold text-ink transition hover:bg-slate-50 hover:text-accent"
+                        className="block rounded-xl px-3 py-2.5 text-sm font-semibold text-ink transition hover:bg-slate-50 hover:text-accent"
                         onClick={() => setIsProjectsOpen(false)}
                       >
                         View all projects
@@ -99,7 +129,7 @@ export default function Navbar() {
                         <Link
                           key={project.label}
                           to={project.to}
-                          className="block rounded-2xl px-4 py-3 text-sm leading-6 text-slate-600 transition hover:bg-slate-50 hover:text-accent"
+                          className="block rounded-xl px-3 py-2.5 text-sm leading-5 text-slate-600 transition hover:bg-slate-50 hover:text-accent"
                           onClick={() => setIsProjectsOpen(false)}
                         >
                           {project.label}
@@ -125,9 +155,10 @@ export default function Navbar() {
       {isOpen && (
         <div
           id="mobile-navigation"
+          ref={mobileNavRef}
           className="mx-auto mt-3 max-w-6xl rounded-3xl border border-white/70 bg-white/95 p-4 shadow-soft backdrop-blur lg:hidden"
         >
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-2.5">
             {navLinks.map((link) =>
               link.label === 'Projects' ? (
                 <div key={link.label} className="rounded-2xl border border-slate-200 bg-slate-50/70">
@@ -145,7 +176,7 @@ export default function Navbar() {
                     <div className="flex flex-col gap-1 px-2 pb-2">
                       <Link
                         to="/projects"
-                        className="rounded-2xl px-4 py-3 text-sm font-semibold text-ink transition hover:bg-white hover:text-accent"
+                        className="rounded-xl px-4 py-2.5 text-sm font-semibold text-ink transition hover:bg-white hover:text-accent"
                         onClick={closeMenu}
                       >
                         View all projects
@@ -154,7 +185,7 @@ export default function Navbar() {
                         <Link
                           key={project.label}
                           to={project.to}
-                          className="rounded-2xl px-4 py-3 text-sm leading-6 text-slate-600 transition hover:bg-white hover:text-accent"
+                          className="rounded-xl px-4 py-2.5 text-sm leading-5 text-slate-600 transition hover:bg-white hover:text-accent"
                           onClick={closeMenu}
                         >
                           {project.label}
