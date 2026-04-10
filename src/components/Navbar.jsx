@@ -76,19 +76,22 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 px-4 pt-4 sm:px-6">
       <nav
-        className={`mx-auto flex max-w-6xl items-center justify-between rounded-full border px-5 py-3 transition-all duration-300 ${
+        className={`mx-auto flex max-w-6xl items-center justify-between rounded-[999px] border px-4 py-2.5 transition-all duration-300 ${
           isScrolled
-            ? 'border-white/70 bg-white/88 shadow-soft backdrop-blur-xl'
-            : 'border-white/50 bg-white/70 backdrop-blur-lg'
+            ? 'border-white/80 bg-white/82 shadow-[0_16px_45px_rgba(15,23,42,0.10)] backdrop-blur-xl'
+            : 'border-white/65 bg-white/68 shadow-[0_10px_30px_rgba(15,23,42,0.06)] backdrop-blur-lg'
         }`}
       >
-        <Link to="/" className="font-display text-xl text-ink interactive-link rounded-full">
+        <Link
+          to="/"
+          className="rounded-full px-4 py-2 font-display text-xl text-ink transition duration-300 hover:bg-white/75 hover:shadow-[inset_0_0_0_1px_rgba(226,232,240,0.9)]"
+        >
           {portfolio.name}
         </Link>
 
         <button
           type="button"
-          className="inline-flex rounded-full border border-slate-300 px-3 py-2 text-sm font-semibold text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 lg:hidden"
+          className="inline-flex rounded-full border border-slate-200 bg-white/75 px-4 py-2 text-sm font-semibold text-ink shadow-sm transition duration-300 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 lg:hidden"
           onClick={() => setIsOpen((current) => !current)}
           aria-expanded={isOpen}
           aria-label="Toggle navigation"
@@ -97,13 +100,17 @@ export default function Navbar() {
           Menu
         </button>
 
-        <div className="hidden items-center gap-6 lg:flex">
+        <div className="hidden items-center gap-2 lg:flex">
           {navLinks.map((link) =>
             link.label === 'Projects' ? (
               <div key={link.label} ref={desktopProjectsRef} className="relative">
                 <button
                   type="button"
-                  className="interactive-link inline-flex items-center gap-2 rounded-full px-1 text-sm font-semibold text-slate-600"
+                  className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 ${
+                    isProjectsOpen
+                      ? 'bg-white text-ink shadow-[0_8px_20px_rgba(15,23,42,0.08)]'
+                      : 'text-slate-600 hover:bg-white/80 hover:text-ink hover:shadow-[0_8px_18px_rgba(15,23,42,0.06)]'
+                  }`}
                   onClick={() => setIsProjectsOpen((current) => !current)}
                   aria-expanded={isProjectsOpen}
                   aria-controls="projects-dropdown"
@@ -145,7 +152,7 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 to={link.isRoute ? link.href : homeSectionHref(link.sectionId)}
-                className="interactive-link rounded-full text-sm font-semibold text-slate-600"
+                className="rounded-full px-4 py-2 text-sm font-semibold text-slate-600 transition duration-300 hover:bg-white/80 hover:text-ink hover:shadow-[0_8px_18px_rgba(15,23,42,0.06)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
               >
                 {link.label}
               </Link>
@@ -158,15 +165,15 @@ export default function Navbar() {
         <div
           id="mobile-navigation"
           ref={mobileNavRef}
-          className="mx-auto mt-3 max-w-6xl rounded-3xl border border-white/70 bg-white/95 p-4 shadow-soft backdrop-blur lg:hidden"
+          className="mx-auto mt-3 max-w-6xl rounded-[2rem] border border-white/75 bg-white/94 p-4 shadow-[0_18px_45px_rgba(15,23,42,0.10)] backdrop-blur lg:hidden"
         >
           <div className="flex flex-col gap-2.5">
             {navLinks.map((link) =>
               link.label === 'Projects' ? (
-                <div key={link.label} className="rounded-2xl border border-slate-200 bg-slate-50/70">
+                <div key={link.label} className="rounded-2xl border border-slate-200 bg-slate-50/80">
                   <button
                     type="button"
-                    className="flex w-full items-center justify-between rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 transition hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+                    className="flex w-full items-center justify-between rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 transition duration-300 hover:bg-white hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
                     onClick={() => setIsMobileProjectsOpen((current) => !current)}
                     aria-expanded={isMobileProjectsOpen}
                   >
@@ -201,7 +208,7 @@ export default function Navbar() {
                 <Link
                   key={link.label}
                   to={link.isRoute ? link.href : homeSectionHref(link.sectionId)}
-                  className="rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+                  className="rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 transition duration-300 hover:bg-white hover:text-accent hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
                   onClick={closeMenu}
                 >
                   {link.label}
