@@ -1,14 +1,13 @@
 import Hero from '../components/Hero';
 import Section from '../components/Section';
 import SkillCard from '../components/SkillCard';
-import ContactCard from '../components/ContactCard';
 import FeaturedProjects from '../components/FeaturedProjects';
 import ExperienceSection from '../components/ExperienceSection';
 import CredentialsSection from '../components/CredentialsSection';
+import ContactSection from '../components/ContactSection';
 import PageLayout from '../components/PageLayout';
-import { getContactItems, portfolio } from '../data/portfolio';
+import { portfolio } from '../data/portfolio';
 
-const contactItems = getContactItems();
 const { sectionContent } = portfolio;
 
 export default function HomePage() {
@@ -97,22 +96,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Contact section */}
-      <Section
-        id="contact"
-        eyebrow={sectionContent.contact.eyebrow}
-        title={sectionContent.contact.title}
-        description={sectionContent.contact.description}
-        className="py-14 sm:py-16 lg:py-20"
-      >
-        <div className="section-shell p-6 sm:p-8 lg:p-10">
-          <div className="section-inner grid gap-4 md:grid-cols-3">
-            {contactItems.map((item) => (
-              <ContactCard key={item.label} {...item} />
-            ))}
-          </div>
-        </div>
-      </Section>
+      <ContactSection />
     </PageLayout>
   );
 }
