@@ -1,7 +1,10 @@
 // Small reusable card for one portfolio project.
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ project, id }) {
   return (
-    <article className="group rounded-[2rem] border border-slate-200/80 bg-white/95 p-7 shadow-card transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-soft">
+    <article
+      id={id}
+      className="group scroll-mt-28 rounded-[2rem] border border-slate-200/80 bg-white/95 p-7 shadow-card transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-soft"
+    >
       <div className="flex items-start justify-between gap-4">
         <h3 className="max-w-xs font-display text-2xl text-ink">{project.title}</h3>
         <span className="rounded-full border border-accent/15 bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-accent">

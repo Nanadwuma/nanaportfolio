@@ -1,7 +1,6 @@
 import Hero from '../components/Hero';
 import Section from '../components/Section';
 import SkillCard from '../components/SkillCard';
-import FeaturedProjects from '../components/FeaturedProjects';
 import ExperienceSection from '../components/ExperienceSection';
 import CredentialsSection from '../components/CredentialsSection';
 import ContactSection from '../components/ContactSection';
@@ -67,9 +66,6 @@ export default function HomePage() {
           </div>
         </div>
       </Section>
-
-      {/* Featured projects preview section */}
-      <FeaturedProjects />
 
       <CredentialsSection />
 
