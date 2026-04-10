@@ -106,7 +106,7 @@ export default function HomePage() {
         className="py-14 sm:py-16 lg:py-20"
       >
         <div className="section-shell p-6 sm:p-8 lg:p-10">
-          <div className="section-inner grid gap-6 md:grid-cols-3">
+          <div className="section-inner grid gap-4 md:grid-cols-3">
             {contactItems.map((item) => (
               <ContactCard key={item.label} {...item} />
             ))}

@@ -26,6 +26,14 @@ export default function Footer() {
           >
             GitHub
           </a>
+          <a
+            className="interactive-link rounded-full"
+            href={portfolio.contact.facebook}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Facebook
+          </a>
         </div>
       </div>
     </footer>

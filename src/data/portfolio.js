@@ -110,7 +110,8 @@ export const portfolio = {
   contact: {
     email: 'nana.dwuma@gmail.com',
     linkedIn: 'https://www.linkedin.com/in/nanadwuma',
-    github: 'https://github.com/replace-with-your-profile',
+    facebook: 'https://www.facebook.com/share/16jjM9Hguo/?mibextid=wwXIfr',
+    github: 'https://github.com/Nanadwuma',
   },
   education: [
     {
@@ -345,15 +346,21 @@ export function getContactItems() {
     },
     {
       label: 'LinkedIn',
-      value: 'LinkedIn Profile',
+      value: '@nanadwuma',
       href: portfolio.contact.linkedIn,
-      helper: 'Professional profile and networking link.',
+      helper: 'LinkedIn',
     },
     {
       label: 'GitHub',
-      value: 'GitHub Profile',
+      value: 'GitHub',
       href: portfolio.contact.github,
-      helper: 'Replace this placeholder GitHub URL in src/data/portfolio.js.',
+      helper: 'Code portfolio',
+    },
+    {
+      label: 'Facebook',
+      value: 'Facebook',
+      href: portfolio.contact.facebook,
+      helper: 'Social profile',
     },
   ];
 }
