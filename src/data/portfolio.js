@@ -5,7 +5,6 @@ export const portfolio = {
   valueStatement:
     'I help finance and operations teams turn complex data into clear reporting, validated insights, and practical business decisions.',
   heroBadge: 'Data analytics portfolio',
-  profileImage: '/profile.jpg',
   about: [
     'I am a Business Analyst with 5+ years of experience supporting finance transformation, ERP reporting, financial data integration, and decision support in consulting and operational environments.',
     'My background spans SQL, Power BI, Excel, Python, reconciliation, reporting modernization, and stakeholder collaboration across Finance, Accounting, audit, and advisory contexts.',

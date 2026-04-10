@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { portfolio } from '../data/portfolio';
+import profileImage from '../../public/profile.jpg';
 
 export default function Hero() {
   return (
@@ -51,7 +52,7 @@ export default function Hero() {
                 <div className="rounded-[1.75rem] bg-[linear-gradient(180deg,_#112033_0%,_#0f172a_100%)] p-8 text-white sm:p-10">
                   <div className="mb-8 flex items-center gap-4">
                     <img
-                      src={portfolio.profileImage}
+                      src={profileImage}
                       alt={`${portfolio.name} portrait`}
                       className="h-20 w-20 rounded-[1.4rem] object-cover ring-2 ring-white/15"
                     />
