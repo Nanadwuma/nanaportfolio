@@ -3,6 +3,8 @@ import Section from '../components/Section';
 import SkillCard from '../components/SkillCard';
 import ContactCard from '../components/ContactCard';
 import FeaturedProjects from '../components/FeaturedProjects';
+import ExperienceSection from '../components/ExperienceSection';
+import CredentialsSection from '../components/CredentialsSection';
 import PageLayout from '../components/PageLayout';
 import { getContactItems, portfolio } from '../data/portfolio';
 
@@ -48,6 +50,8 @@ export default function HomePage() {
         </div>
       </Section>
 
+      <ExperienceSection />
+
       {/* Skills section */}
       <Section
         id="skills"
@@ -67,6 +71,8 @@ export default function HomePage() {
 
       {/* Featured projects preview section */}
       <FeaturedProjects />
+
+      <CredentialsSection />
 
       {/* Resume section */}
       <Section

@@ -1,19 +1,19 @@
 // This file keeps most editable content in one place so the site is easy to maintain.
 export const portfolio = {
   name: 'Nana Dwuma Daniel',
-  headline: 'Data Analyst | Python, SQL, Power BI, Excel',
+  headline: 'Business Analyst | SQL, Power BI, Python, Excel, ERP Reporting',
   valueStatement:
-    'I turn data into clear insights, stronger reporting, and practical business solutions that help teams make confident decisions.',
+    'I help finance and operations teams turn complex data into clear reporting, validated insights, and practical business decisions.',
   heroBadge: 'Data analytics portfolio',
   about: [
-    'I am a Data Analyst with 4+ years of experience spanning analytics, auditing, business advisory, and data-driven problem solving. My work centers on making information more useful, reliable, and actionable for the people who depend on it.',
-    'I am currently pursuing an MBA and an M.S. in Applied Data Analytics at Appalachian State University, expanding my ability to connect technical analysis with strategic business thinking.',
-    'Across my projects, I bring a thoughtful mix of analytical rigor, process improvement, and automation to streamline reporting, surface insights, and support better decision-making.',
+    'I am a Business Analyst with 5+ years of experience supporting finance transformation, ERP reporting, financial data integration, and decision support in consulting and operational environments.',
+    'My background spans SQL, Power BI, Excel, Python, reconciliation, reporting modernization, and stakeholder collaboration across Finance, Accounting, audit, and advisory contexts.',
+    'I am currently pursuing an MBA and an M.S. in Applied Data Analytics at Appalachian State University, strengthening my ability to connect technical analysis with strategic business thinking.',
   ],
   stats: [
-    { value: '4+ Years', label: 'Analytics and advisory experience' },
+    { value: '5+ Years', label: 'Finance, analytics, and advisory experience' },
     { value: '2 Graduate Degrees', label: 'MBA + M.S. in Applied Data Analytics' },
-    { value: 'End-to-End', label: 'Reporting, modeling, automation, and insight delivery' },
+    { value: 'ERP + BI', label: 'Reporting, data validation, automation, and dashboard delivery' },
   ],
   skills: [
     {
@@ -61,64 +61,151 @@ export const portfolio = {
   ],
   resume: {
     file: '/resume/Nana-Resume.pdf',
-    note: 'Replace the placeholder PDF in public/resume/Nana-Resume.pdf with your actual resume file.',
+    note: 'The resume download is connected to your uploaded PDF in public/resume/Nana-Resume.pdf.',
   },
   // Edit section headings and short supporting text here.
   sectionContent: {
     about: {
       eyebrow: 'About',
-      title: 'Analytical, business-minded, and focused on practical impact.',
+      title: 'Finance-aware, analytically grounded, and focused on practical business impact.',
       description:
-        'I bring together technical analysis, reporting discipline, and business context to help organizations make better use of their data.',
+        'I bring together reporting discipline, technical analysis, and business context to help organizations improve visibility, control, and decision-making.',
       highlights: [
-        'Strong foundation in analytics, auditing, and business advisory.',
+        'Experience supporting finance transformation, ERP reporting, and data integration initiatives.',
         'Graduate training in business leadership and applied data analytics.',
-        'Experience improving reporting quality, efficiency, and usability through automation.',
+        'Strong background in validation, reconciliation, automation, and stakeholder-facing reporting.',
       ],
+    },
+    experience: {
+      eyebrow: 'Experience',
+      title: 'Professional experience across finance, analytics, and reporting operations.',
+      description:
+        'My background combines business analysis, reporting automation, financial data validation, and stakeholder support across higher education, consulting, and operations.',
     },
     skills: {
       eyebrow: 'Skills',
       title: 'Technical strengths built for reporting, analysis, and business insight.',
       description:
-        'The stack below reflects the tools and capabilities I use to clean data, model information, automate reporting, and communicate results clearly.',
+        'These are the tools and capabilities I use to clean data, model information, automate reporting, and communicate results clearly.',
     },
     projects: {
       eyebrow: 'Projects',
       title: 'Selected work focused on automation, insight generation, and decision support.',
       description:
-        'Each project highlights how I use data tools to solve operational, analytical, or research-oriented problems with measurable value.',
+        'These featured projects show how I use analytics and reporting tools to solve operational, analytical, and research-driven problems.',
     },
     resume: {
       eyebrow: 'Resume',
       title: 'A clear path for recruiters and hiring managers.',
       description:
-        'The resume download button is already connected to the public resume folder, so replacing the placeholder file later is straightforward.',
+        'The resume download button is already connected to the public resume folder and now points to your uploaded resume PDF.',
     },
     contact: {
       eyebrow: 'Contact',
       title: 'Let’s connect.',
       description:
-        'I’m open to opportunities, professional conversations, and collaborations where data can drive better decisions and better outcomes.',
+        'I’m open to opportunities, professional conversations, and collaborations where analytics can create measurable business value.',
     },
   },
   contact: {
-    email: 'nana.email@example.com',
-    linkedIn: 'https://www.linkedin.com/in/replace-with-your-link',
+    email: 'nana.dwuma@gmail.com',
+    linkedIn: 'https://www.linkedin.com/in/nanadwuma',
     github: 'https://github.com/replace-with-your-profile',
   },
+  education: [
+    {
+      school: 'Appalachian State University',
+      location: 'Boone, NC',
+      credential: 'Master of Science in Applied Data Analytics',
+      period: 'Expected May 2026',
+    },
+    {
+      school: 'Appalachian State University',
+      location: 'Boone, NC',
+      credential: 'Master of Business Administration',
+      period: 'Expected May 2026',
+    },
+    {
+      school: 'University of Cape Coast',
+      location: 'Cape Coast, Ghana',
+      credential: 'Bachelor of Commerce',
+      period: 'October 2020',
+    },
+    {
+      school: 'University of Cape Coast',
+      location: 'Cape Coast, Ghana',
+      credential: 'Diploma in Commerce',
+      period: 'October 2018',
+    },
+  ],
+  certifications: [
+    'Project Management Professional (PMP) | Project Management Institute | August 2025',
+    'Microsoft Office Specialist: Excel Associate (Microsoft 365 Apps) | April 2025',
+    'International Institute of Business Analysis (IIBA) | Member | April 2024',
+  ],
+  experience: [
+    {
+      role: 'Project Support Intern',
+      company: 'Prestige School Solutions LLC',
+      location: 'Remote',
+      period: 'Summer 2025',
+      bullets: [
+        'Supported financial data integration processes across payroll and accounting systems.',
+        'Designed ETL workflows in Python to standardize financial data for ERP reporting.',
+        'Conducted reconciliation and validation checks during system conversions.',
+        'Built Power BI dashboards to support financial performance monitoring.',
+        'Collaborated with Finance and IT teams during reporting automation initiatives.',
+      ],
+    },
+    {
+      role: 'Graduate Assistant',
+      company: 'Appalachian State University',
+      location: 'Boone, NC',
+      period: 'August 2024 to Present',
+      bullets: [
+        'Supported financial tracking, budget analysis, research, and reporting initiatives in the Finance, Banking and Insurance department.',
+        'Developed reporting tools to help leadership make better decisions using advanced Excel.',
+        'Assisted with process documentation and data quality validation for academic financial initiatives using Excel and SharePoint.',
+      ],
+    },
+    {
+      role: 'Data Analyst I',
+      company: 'Forvis Mazars',
+      location: 'Accra, Ghana',
+      period: 'September 2020 to July 2024',
+      bullets: [
+        'Partnered with Finance and Accounting teams to analyze financial datasets and support advisory and transformation initiatives.',
+        'Wrote SQL queries to extract, validate, and reconcile large financial datasets across multiple systems.',
+        'Supported ERP and reporting modernization efforts by assessing current-state workflows and identifying improvement opportunities.',
+        'Built Power BI dashboards to support leadership reporting and operational visibility.',
+        'Contributed to documentation of data definitions, financial workflows, and reporting standards.',
+      ],
+    },
+    {
+      role: 'Operations Manager',
+      company: 'Dalion Royal Ent. Limited',
+      location: 'Accra, Ghana',
+      period: 'July 2018 to 2020',
+      bullets: [
+        'Analyzed operational and financial data to support budgeting, forecasting, and business planning.',
+        'Managed payroll, tax filings, and compliance reporting using Excel and QuickBooks.',
+        'Prepared analytical summaries and proposals to support client and management decision-making.',
+      ],
+    },
+  ],
   // Everything below powers the separate /projects page.
   projectPage: {
     title: 'Expanded case studies and portfolio work.',
     description:
-      'This page gives you room for a fuller set of projects, stronger business context, and more dashboard-style visuals.',
+      'This page provides a broader view of my project work, with more business context, stronger outcomes, and additional dashboard-style examples.',
     dashboardTitle: 'Dashboard showcase',
     dashboardDescription:
-      'These visual blocks give recruiters a quick sense of the reporting and dashboard experiences you can speak to in interviews.',
+      'These dashboard-style examples give recruiters and hiring managers a quick sense of the reporting experiences I can speak to in interviews.',
     projects: [
       {
         title: 'ORBIT Payroll Reporting Automation Tool',
         summary:
-          'Built a Python-based solution that transformed Excel payroll data into a standardized CNT file format for payroll reporting.',
+          'Built a Python-based automation tool that converted Excel payroll data into a standardized CNT file format for payroll reporting.',
         tools: ['Python', 'Excel', 'Process Automation', 'Data Validation'],
         impact:
           'Reduced manual effort, improved consistency, lowered reporting errors, and created a more reliable payroll reporting workflow.',
@@ -126,15 +213,15 @@ export const portfolio = {
       {
         title: 'Privacy Policy Compliance Analysis',
         summary:
-          'Researched privacy policies using natural language processing and machine learning to evaluate GDPR and CCPA compliance signals.',
+          'Applied natural language processing and machine learning to analyze privacy policies and evaluate GDPR and CCPA compliance signals.',
         tools: ['Python', 'NLP', 'Machine Learning', 'Research Analysis'],
         impact:
-          'Combined text analytics with structured research methods to support rigorous compliance assessment and insight generation.',
+          'Combined text analytics with structured research methods to support rigorous compliance assessment and meaningful insight generation.',
       },
       {
         title: 'Business Intelligence Dashboards',
         summary:
-          'Designed dashboards and reporting solutions in Power BI and Excel to support performance tracking and business decision-making.',
+          'Designed dashboards and reporting solutions in Power BI and Excel to support performance tracking, leadership reporting, and business decision-making.',
         tools: ['Power BI', 'Excel', 'Data Visualization', 'KPI Reporting'],
         impact:
           'Turned complex data into clear, stakeholder-friendly reporting that improved visibility, alignment, and decision support.',
@@ -254,13 +341,13 @@ export function getContactItems() {
       label: 'Email',
       value: portfolio.contact.email,
       href: `mailto:${portfolio.contact.email}`,
-      helper: 'Replace this placeholder email in src/data/portfolio.js.',
+      helper: 'Primary email contact.',
     },
     {
       label: 'LinkedIn',
       value: 'LinkedIn Profile',
       href: portfolio.contact.linkedIn,
-      helper: 'Replace this placeholder LinkedIn URL in src/data/portfolio.js.',
+      helper: 'Professional profile and networking link.',
     },
     {
       label: 'GitHub',
