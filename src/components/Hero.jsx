@@ -50,15 +50,15 @@ export default function Hero() {
               <div className="absolute inset-x-10 top-8 h-40 rounded-full bg-accent/10 blur-3xl" />
               <div className="animate-float rounded-[2rem] border border-white/80 bg-white/85 p-4 shadow-soft backdrop-blur-xl">
                 <div className="rounded-[1.75rem] border border-slate-200/70 bg-[linear-gradient(180deg,_#f4f8fb_0%,_#edf3f7_100%)] p-7 text-ink sm:p-8">
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-5">
                     <img
                       src={profileImage}
                       alt={`${portfolio.name} portrait`}
-                      className="h-20 w-20 rounded-[1.35rem] object-cover ring-2 ring-white shadow-card"
+                      className="h-28 w-28 rounded-[1.6rem] object-cover ring-4 ring-white shadow-soft"
                     />
-                    <div>
+                    <div className="max-w-[13rem]">
                       <p className="text-sm uppercase tracking-[0.3em] text-accent">Professional focus</p>
-                      <p className="mt-2 text-lg font-semibold text-ink">{portfolio.name}</p>
+                      <p className="mt-2 text-xl font-semibold leading-tight text-ink">{portfolio.name}</p>
                       <p className="mt-1 text-sm leading-6 text-slate-600">
                         Business analysis, reporting, and finance data solutions
                       </p>

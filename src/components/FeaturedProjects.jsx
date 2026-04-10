@@ -15,6 +15,15 @@ export default function FeaturedProjects() {
     >
       <div className="section-shell p-6 sm:p-8 lg:p-10">
         <div className="section-inner space-y-8">
+          <div className="max-w-4xl rounded-[1.75rem] border border-slate-200/80 bg-white/95 p-6 shadow-card">
+            <p className="text-base leading-8 text-slate-600">
+              These projects highlight my ability to use Python, SQL, Power BI, Excel, and business analysis
+              skills to solve practical data challenges. They demonstrate strengths in automation, reporting,
+              data validation, dashboard development, and transforming complex datasets into insights that
+              support better business decisions.
+            </p>
+          </div>
+
           <div className="grid gap-6 lg:grid-cols-3">
             {portfolio.projects.map((project) => (
               <ProjectCard key={project.title} project={project} />
