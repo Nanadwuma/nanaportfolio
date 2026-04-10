@@ -19,7 +19,8 @@ export default function Navbar() {
   const mobileNavRef = useRef(null);
   const location = useLocation();
   const projectLinks = portfolio.projectPage.projects.map((project) => ({
-    label: project.title,
+    label: project.navLabel || project.title,
+    fullLabel: project.title,
     to: project.route || `/projects?section=${slugifyProjectTitle(project.title)}`,
   }));
 
@@ -114,9 +115,9 @@ export default function Navbar() {
                 {isProjectsOpen && (
                   <div
                     id="projects-dropdown"
-                    className="absolute left-1/2 top-full z-[60] mt-3 w-64 -translate-x-1/2 rounded-2xl border border-slate-200/90 bg-white/97 p-2 shadow-soft backdrop-blur-xl"
+                    className="absolute left-1/2 top-full z-[60] mt-3 w-72 -translate-x-1/2 rounded-2xl border border-slate-200 bg-white p-2 shadow-[0_18px_45px_rgba(15,23,42,0.12)]"
                   >
-                    <div className="absolute left-1/2 top-0 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rotate-45 border-l border-t border-slate-200/90 bg-white/97" />
+                    <div className="absolute left-1/2 top-0 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rotate-45 border-l border-t border-slate-200 bg-white" />
                     <div className="relative space-y-1">
                       <Link
                         to="/projects"
@@ -127,9 +128,10 @@ export default function Navbar() {
                       </Link>
                       {projectLinks.map((project) => (
                         <Link
-                          key={project.label}
+                          key={project.fullLabel}
                           to={project.to}
-                          className="block rounded-xl px-3 py-2.5 text-sm leading-5 text-slate-600 transition hover:bg-slate-50 hover:text-accent"
+                          title={project.fullLabel}
+                          className="block truncate rounded-xl px-3 py-2.5 text-sm leading-5 text-slate-600 transition hover:bg-slate-50 hover:text-accent"
                           onClick={() => setIsProjectsOpen(false)}
                         >
                           {project.label}
@@ -183,8 +185,9 @@ export default function Navbar() {
                       </Link>
                       {projectLinks.map((project) => (
                         <Link
-                          key={project.label}
+                          key={project.fullLabel}
                           to={project.to}
+                          title={project.fullLabel}
                           className="rounded-xl px-4 py-2.5 text-sm leading-5 text-slate-600 transition hover:bg-white hover:text-accent"
                           onClick={closeMenu}
                         >

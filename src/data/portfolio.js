@@ -216,6 +216,7 @@ export const portfolio = {
     projects: [
       {
         title: 'Thesis',
+        navLabel: 'Thesis',
         route: '/projects/thesis',
         subtitle:
           'Assessing Online Privacy Policy Compliance with GDPR and CCPA Using Natural Language Processing',
@@ -384,6 +385,7 @@ export const portfolio = {
       },
       {
         title: 'ORBIT Payroll Reporting Automation Tool',
+        navLabel: 'ORBIT Automation',
         summary:
           'Built a Python-based automation tool that converted Excel payroll data into a standardized CNT file format for payroll reporting.',
         tools: ['Python', 'Excel', 'Process Automation', 'Data Validation'],
@@ -392,6 +394,7 @@ export const portfolio = {
       },
       {
         title: 'Business Intelligence Dashboards',
+        navLabel: 'BI Dashboards',
         summary:
           'Designed dashboards and reporting solutions in Power BI and Excel to support performance tracking, leadership reporting, and business decision-making.',
         tools: ['Power BI', 'Excel', 'Data Visualization', 'KPI Reporting'],
@@ -400,6 +403,7 @@ export const portfolio = {
       },
       {
         title: 'Executive Performance Reporting Suite',
+        navLabel: 'Executive Reporting',
         summary:
           'Created executive-facing reporting views that combined KPI tracking, trend analysis, and concise monthly performance summaries.',
         tools: ['Power BI', 'Excel', 'SQL', 'Stakeholder Reporting'],
@@ -408,6 +412,7 @@ export const portfolio = {
       },
       {
         title: 'Audit Analytics and Exception Review',
+        navLabel: 'Audit Analytics',
         summary:
           'Analyzed financial and operational records to identify anomalies, support audit procedures, and strengthen reporting quality.',
         tools: ['Excel', 'SQL', 'Data Analysis', 'Audit Support'],
@@ -416,6 +421,7 @@ export const portfolio = {
       },
       {
         title: 'Process Improvement Reporting Automation',
+        navLabel: 'Reporting Automation',
         summary:
           'Streamlined recurring reporting tasks by standardizing data preparation steps and reducing manual spreadsheet work.',
         tools: ['Python', 'Excel', 'Automation', 'Process Improvement'],
