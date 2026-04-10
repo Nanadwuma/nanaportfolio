@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 // Small reusable card for one portfolio project.
 export default function ProjectCard({ project, id }) {
   return (
@@ -29,6 +31,14 @@ export default function ProjectCard({ project, id }) {
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Impact</p>
         <p className="mt-3 text-base leading-7 text-slate-600">{project.impact}</p>
       </div>
+
+      {project.route && (
+        <div className="mt-6">
+          <Link to={project.route} className="btn-secondary">
+            View Case Study
+          </Link>
+        </div>
+      )}
     </article>
   );
 }

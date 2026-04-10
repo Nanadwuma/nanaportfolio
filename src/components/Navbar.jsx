@@ -18,7 +18,7 @@ export default function Navbar() {
   const location = useLocation();
   const projectLinks = portfolio.projectPage.projects.map((project) => ({
     label: project.title,
-    to: `/projects?section=${slugifyProjectTitle(project.title)}`,
+    to: project.route || `/projects?section=${slugifyProjectTitle(project.title)}`,
   }));
 
   useEffect(() => {

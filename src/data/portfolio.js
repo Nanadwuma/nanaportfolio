@@ -216,7 +216,7 @@ export const portfolio = {
     projects: [
       {
         title: 'Thesis',
-        variant: 'thesis',
+        route: '/projects/thesis',
         subtitle:
           'Assessing Online Privacy Policy Compliance with GDPR and CCPA Using Natural Language Processing',
         summary:
@@ -377,6 +377,10 @@ export const portfolio = {
             ],
           },
         ],
+        previewSummary:
+          'A dedicated graduate research project using Python, NLP, BERT, and statistical analysis to evaluate privacy policy compliance across thousands of websites.',
+        previewImpact:
+          'Highlights end-to-end research design, model evaluation, compliance analysis, and executive-style presentation of complex findings.',
       },
       {
         title: 'ORBIT Payroll Reporting Automation Tool',
