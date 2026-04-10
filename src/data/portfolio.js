@@ -1,9 +1,9 @@
 // This file keeps most editable content in one place so the site is easy to maintain.
 export const portfolio = {
   name: 'Nana Dwuma Daniel',
-  headline: 'Business Analyst | SQL, Power BI, Python, Excel, ERP Reporting',
+  headline: 'Turning complex business data into clear reporting, insight, and better decisions.',
   valueStatement:
-    'I help finance and operations teams turn complex data into clear reporting, validated insights, and practical business decisions.',
+    'Business Analyst with 5+ years of experience delivering reporting, analytics, and finance-focused data solutions across consulting, operations, and higher education.',
   heroBadge: 'Data analytics portfolio',
   about: [
     'I am a Business Analyst with 5+ years of experience supporting finance transformation, ERP reporting, financial data integration, and decision support in consulting and operational environments.',
@@ -11,10 +11,21 @@ export const portfolio = {
     'I am currently pursuing an MBA and an M.S. in Applied Data Analytics at Appalachian State University, strengthening my ability to connect technical analysis with strategic business thinking.',
   ],
   stats: [
-    { value: '5+ Years', label: 'Finance, analytics, and advisory experience' },
-    { value: '2 Graduate Degrees', label: 'MBA + M.S. in Applied Data Analytics' },
-    { value: 'ERP + BI', label: 'Reporting, data validation, automation, and dashboard delivery' },
+    { value: '5+ Years', label: 'Experience in analytics, reporting, and business advisory' },
+    { value: 'MBA + M.S.', label: 'Graduate training in business and applied data analytics' },
+    { value: 'ERP + BI', label: 'Experience in reporting automation, validation, and dashboards' },
   ],
+  heroPanel: {
+    eyebrow: 'Professional profile',
+    title: 'Business Analyst focused on finance, reporting, and practical analytics.',
+    summary:
+      'I combine business context, technical analysis, and clear communication to deliver reporting that leaders can trust and use.',
+    highlights: [
+      'Finance and operations reporting',
+      'Data validation and process improvement',
+      'Dashboards, automation, and decision support',
+    ],
+  },
   skills: [
     {
       category: 'Programming & Analysis',
