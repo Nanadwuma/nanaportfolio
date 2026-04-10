@@ -19,6 +19,16 @@ export function useReveal() {
       return undefined;
     }
 
+    const rect = element.getBoundingClientRect();
+    const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+    const isAlreadyNearViewport =
+      rect.top < viewportHeight * 0.92 && rect.bottom > viewportHeight * 0.08;
+
+    if (isAlreadyNearViewport) {
+      setIsVisible(true);
+      return undefined;
+    }
+
     setIsVisible(false);
 
     const observer = new IntersectionObserver(
@@ -28,7 +38,7 @@ export function useReveal() {
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.2 },
+      { threshold: 0.08, rootMargin: '0px 0px -8% 0px' },
     );
 
     observer.observe(element);
