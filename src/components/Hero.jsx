@@ -49,8 +49,21 @@ export default function Hero() {
               <div className="absolute inset-x-10 top-8 h-40 rounded-full bg-accent/10 blur-3xl" />
               <div className="animate-float rounded-[2rem] border border-white/80 bg-white/85 p-4 shadow-soft backdrop-blur-xl">
                 <div className="rounded-[1.75rem] bg-[linear-gradient(180deg,_#112033_0%,_#0f172a_100%)] p-8 text-white sm:p-10">
+                  <div className="mb-8 flex items-center gap-4">
+                    <img
+                      src={portfolio.profileImage}
+                      alt={`${portfolio.name} portrait`}
+                      className="h-20 w-20 rounded-[1.4rem] object-cover ring-2 ring-white/15"
+                    />
+                    <div>
+                      <p className="text-sm uppercase tracking-[0.3em] text-teal-200">Professional focus</p>
+                      <p className="mt-2 text-base font-semibold text-white">{portfolio.name}</p>
+                      <p className="mt-1 text-sm text-slate-300">Business analysis, reporting, and finance data solutions</p>
+                    </div>
+                  </div>
+
                   <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                    <p className="text-sm uppercase tracking-[0.3em] text-teal-200">Professional focus</p>
+                    <p className="text-sm uppercase tracking-[0.3em] text-teal-200">Profile snapshot</p>
                     <span className="rounded-full border border-white/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-slate-300">
                       Strategy + analysis
                     </span>
