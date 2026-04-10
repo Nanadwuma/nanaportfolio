@@ -43,12 +43,12 @@ export const portfolio = {
         'Reduced manual effort, improved consistency, lowered reporting errors, and created a more reliable payroll reporting workflow.',
     },
     {
-      title: 'Privacy Policy Compliance Analysis',
+      title: 'Thesis',
       summary:
-        'Researched privacy policies using natural language processing and machine learning to evaluate GDPR and CCPA compliance signals.',
-      tools: ['Python', 'NLP', 'Machine Learning', 'Research Analysis'],
+        'Designed and defended a graduate thesis that used NLP and a BERT-based classifier to assess privacy policy compliance with GDPR and CCPA at scale.',
+      tools: ['Python', 'NLP', 'BERT', 'Research Analysis', 'Statistical Testing'],
       impact:
-        'Combined text analytics with structured research methods to support rigorous compliance assessment and insight generation.',
+        'Demonstrated how machine learning can support large-scale compliance auditing, reveal disclosure gaps, and generate evidence-backed research findings.',
     },
     {
       title: 'Business Intelligence Dashboards',
@@ -92,7 +92,7 @@ export const portfolio = {
       eyebrow: 'Projects',
       title: 'Selected work focused on automation, insight generation, and decision support.',
       description:
-        'These featured projects show how I use analytics and reporting tools to solve operational, analytical, and research-driven problems.',
+        'These featured projects show how I use analytics, reporting, automation, and applied research to solve practical business and data problems.',
     },
     resume: {
       eyebrow: 'Resume',
@@ -196,13 +196,177 @@ export const portfolio = {
   ],
   // Everything below powers the separate /projects page.
   projectPage: {
-    title: 'Expanded case studies and portfolio work.',
+    title: 'Case studies, research, and project work.',
     description:
-      'This page provides a broader view of my project work, with more business context, stronger outcomes, and additional dashboard-style examples.',
+      'This page brings together hands-on automation work, reporting projects, and my graduate thesis, with more context on the problem, approach, outcomes, and supporting visuals.',
     dashboardTitle: 'Dashboard showcase',
     dashboardDescription:
       'These dashboard-style examples give recruiters and hiring managers a quick sense of the reporting experiences I can speak to in interviews.',
     projects: [
+      {
+        title: 'Thesis',
+        variant: 'thesis',
+        subtitle:
+          'Assessing Online Privacy Policy Compliance with GDPR and CCPA Using Natural Language Processing',
+        summary:
+          'This graduate thesis developed and validated an automated NLP framework for assessing privacy policy compliance with two major regulatory frameworks at scale. The work combined research design, web data collection, text preprocessing, multi-label classification, and statistical analysis to evaluate how organizations disclose privacy practices across GDPR and CCPA requirements.',
+        tools: [
+          'Python',
+          'NLP',
+          'BERT',
+          'Machine Learning',
+          'Statistical Analysis',
+          'Research Design',
+        ],
+        impact:
+          'The study showed that automated compliance assessment is both practical and scalable, identified major disclosure gaps across thousands of websites, and demonstrated that organizations often perform better on GDPR-style disclosures than on CCPA-specific obligations.',
+        detailSections: [
+          {
+            title: 'What I built',
+            text: 'I designed a five-phase research workflow that moved from collecting policy URLs and validating usable documents to preprocessing text, training a BERT-based multi-label classifier, and analyzing compliance outcomes across 24 disclosure elements.',
+          },
+          {
+            title: 'Why it matters',
+            text: 'Manual review of privacy policies does not scale well. This project shows how data science and language models can support faster, more structured compliance assessment for researchers, organizations, and regulators.',
+          },
+          {
+            title: 'How it reflects my skills',
+            text: 'The thesis brought together Python, NLP, model evaluation, data quality validation, statistical testing, research communication, and stakeholder-ready presentation design in one end-to-end project.',
+          },
+        ],
+        highlightMetrics: [
+          { label: 'Policies analyzed', value: '3,674' },
+          { label: 'Held-out evaluation set', value: '735' },
+          { label: 'Overall model accuracy', value: '84.5%' },
+          { label: 'Compliance elements', value: '24' },
+        ],
+        findings: [
+          'GDPR mean compliance reached 68.9%, while CCPA mean compliance was 42.6%, revealing a statistically significant disclosure gap.',
+          'The weakest CCPA disclosure areas were notice at collection, non-discrimination rights, and the right to delete.',
+          'Compliance gaps were systemic rather than industry-specific, with no statistically significant differences across finance, health, retail, technology, and media.',
+          'The BERT-based classifier achieved strong overall performance, supporting scalable automated analysis of privacy policy disclosures.',
+        ],
+        deliverables: [
+          { label: 'Read manuscript', href: '/thesis/Manuscript-Spring-2026-Thesis.pdf' },
+          { label: 'View defense slides', href: '/thesis/Thesis-Defense.pptx' },
+        ],
+        visuals: [
+          {
+            kind: 'metrics',
+            title: 'Study scope and design',
+            description: 'The thesis combined large-scale policy collection, validation, NLP modeling, and statistical analysis.',
+            metrics: [
+              { label: 'URLs scraped', value: '4,913' },
+              { label: 'Valid policies', value: '3,674' },
+              { label: 'Training set', value: '2,571' },
+              { label: 'Sectors', value: '5' },
+            ],
+          },
+          {
+            kind: 'bars',
+            title: 'Overall compliance gap',
+            description: 'Across 3,674 privacy policies, GDPR disclosures were much stronger than CCPA disclosures.',
+            items: [
+              { label: 'GDPR mean compliance', value: '68.9%', width: '68.9%' },
+              { label: 'CCPA mean compliance', value: '42.6%', width: '42.6%' },
+              { label: 'Gap', value: '26.3 pp', width: '26.3%' },
+            ],
+          },
+          {
+            kind: 'bars',
+            title: 'GDPR element-level compliance',
+            description: 'Basic transparency items were usually disclosed, while specialized obligations lagged behind.',
+            items: [
+              { label: 'Recipients / Third Parties', value: '96.4%', width: '96.4%' },
+              { label: 'Processing Purposes', value: '94.9%', width: '94.9%' },
+              { label: 'Data Categories', value: '94.5%', width: '94.5%' },
+              { label: 'Controller Identity', value: '91.7%', width: '91.7%' },
+              { label: 'Lawful Basis', value: '88.1%', width: '88.1%' },
+              { label: 'Third Country Transfers', value: '22.3%', width: '22.3%' },
+            ],
+          },
+          {
+            kind: 'bars',
+            title: 'CCPA element-level compliance',
+            description: 'CCPA-specific rights and notice requirements were the weakest part of the compliance picture.',
+            items: [
+              { label: 'Categories Disclosed to Third Parties', value: '73.3%', width: '73.3%' },
+              { label: 'Right to Opt-Out', value: '71.8%', width: '71.8%' },
+              { label: 'Sources of Information', value: '68.2%', width: '68.2%' },
+              { label: 'Notice at Collection', value: '10.3%', width: '10.3%' },
+              { label: 'Non-Discrimination Rights', value: '16.1%', width: '16.1%' },
+              { label: 'Right to Delete', value: '20.5%', width: '20.5%' },
+            ],
+          },
+          {
+            kind: 'comparison',
+            title: 'Cross-sector comparison',
+            description: 'Compliance patterns were broadly similar across industries, pointing to a systemic issue rather than a sector-specific one.',
+            rows: [
+              { label: 'Finance', leftValue: '68.8%', rightValue: '42.6%' },
+              { label: 'Health', leftValue: '68.3%', rightValue: '41.4%' },
+              { label: 'Retail', leftValue: '69.5%', rightValue: '44.0%' },
+              { label: 'Technology', leftValue: '69.6%', rightValue: '42.5%' },
+              { label: 'Media', leftValue: '68.1%', rightValue: '42.3%' },
+            ],
+            leftLabel: 'GDPR',
+            rightLabel: 'CCPA',
+          },
+          {
+            kind: 'split',
+            title: 'Structural compliance differences',
+            description: 'Organizations handled overlapping requirements better than CCPA-unique obligations.',
+            leftTitle: 'Stronger overlap areas',
+            leftItems: ['Third-party disclosures', 'Processing purposes', 'Data categories', 'Opt-out rights'],
+            rightTitle: 'Weakest CCPA-specific areas',
+            rightItems: ['Notice at collection', 'Non-discrimination rights', 'Right to delete', 'Authorized agent provisions'],
+          },
+          {
+            kind: 'metrics',
+            title: 'Model performance',
+            description: 'The BERT-based multi-label classifier performed strongly on the held-out evaluation set.',
+            metrics: [
+              { label: 'Accuracy', value: '84.5%' },
+              { label: 'Average F1', value: '0.789' },
+              { label: 'Average precision', value: '0.827' },
+              { label: 'Hamming loss', value: '0.155' },
+            ],
+          },
+          {
+            kind: 'bullets',
+            title: 'Key findings',
+            description: 'The main research conclusions presented in the thesis defense.',
+            items: [
+              'Compliance was uneven, with GDPR substantially stronger than CCPA.',
+              'Sector differences were minimal, suggesting a broad compliance challenge.',
+              'A single unified privacy policy strategy does not adequately satisfy both frameworks.',
+              'NLP-based assessment is viable for large-scale compliance analysis.',
+            ],
+          },
+          {
+            kind: 'bullets',
+            title: 'Research contributions',
+            description: 'The study added both methodological and practical value to the literature.',
+            items: [
+              'A large-scale dual-framework assessment of GDPR and CCPA compliance.',
+              'A validated 24-element compliance framework spanning both regulations.',
+              'One of the larger privacy policy datasets used in this type of research.',
+              'Evidence that automated compliance evaluation can be scaled using NLP.',
+            ],
+          },
+          {
+            kind: 'bullets',
+            title: 'Recommendations and next steps',
+            description: 'Recommendations presented for organizations, regulators, and future researchers.',
+            items: [
+              'Treat GDPR and CCPA as separate compliance obligations rather than assuming one policy satisfies both.',
+              'Strengthen CCPA-specific disclosure requirements, especially notice at collection and consumer rights language.',
+              'Encourage clearer, more standardized, and more machine-readable privacy policy formats.',
+              'Extend the framework to other laws, stronger legal-domain models, and real-world compliance settings.',
+            ],
+          },
+        ],
+      },
       {
         title: 'ORBIT Payroll Reporting Automation Tool',
         summary:
@@ -210,14 +374,6 @@ export const portfolio = {
         tools: ['Python', 'Excel', 'Process Automation', 'Data Validation'],
         impact:
           'Reduced manual effort, improved consistency, lowered reporting errors, and created a more reliable payroll reporting workflow.',
-      },
-      {
-        title: 'Privacy Policy Compliance Analysis',
-        summary:
-          'Applied natural language processing and machine learning to analyze privacy policies and evaluate GDPR and CCPA compliance signals.',
-        tools: ['Python', 'NLP', 'Machine Learning', 'Research Analysis'],
-        impact:
-          'Combined text analytics with structured research methods to support rigorous compliance assessment and meaningful insight generation.',
       },
       {
         title: 'Business Intelligence Dashboards',
