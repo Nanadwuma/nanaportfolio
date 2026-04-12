@@ -310,7 +310,7 @@ export const portfolio = {
         ],
         deliverables: [
           { label: 'Read manuscript', href: `${baseUrl}thesis/Manuscript-Spring-2026-Thesis.pdf` },
-          { label: 'View defense slides', href: `${baseUrl}thesis/Thesis-Defense.pptx` },
+          { label: 'View defense slides', href: '/projects/thesis?section=thesis-visuals', isRoute: true },
         ],
         visuals: [
           {

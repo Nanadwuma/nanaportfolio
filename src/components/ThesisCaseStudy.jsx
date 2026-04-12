@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function VisualCard({ visual }) {
   if (visual.kind === 'metrics') {
     return (
@@ -147,15 +149,21 @@ export default function ThesisCaseStudy({ project, id }) {
 
           <div className="mt-6 flex flex-wrap gap-3">
             {project.deliverables.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                target="_blank"
-                rel="noreferrer"
-                className="btn-secondary"
-              >
-                {item.label}
-              </a>
+              item.isRoute ? (
+                <Link key={item.label} to={item.href} className="btn-secondary">
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn-secondary"
+                >
+                  {item.label}
+                </a>
+              )
             ))}
           </div>
 
@@ -206,7 +214,7 @@ export default function ThesisCaseStudy({ project, id }) {
         </div>
       </div>
 
-      <div className="mt-10">
+      <div id="thesis-visuals" className="mt-10 scroll-mt-28">
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-accent">Thesis visuals</p>
           <h4 className="mt-4 font-display text-3xl leading-tight text-ink">Presentation highlights brought into the portfolio.</h4>
