@@ -1,4 +1,6 @@
 // This file keeps most editable content in one place so the site is easy to maintain.
+const baseUrl = import.meta.env.BASE_URL;
+
 export const portfolio = {
   name: 'Nana Dwuma Daniel',
   headline: 'Turning complex business data into clear reporting, insight, and better decisions.',
@@ -71,7 +73,7 @@ export const portfolio = {
     },
   ],
   resume: {
-    file: '/resume/Nana-Resume.pdf',
+    file: `${baseUrl}resume/Nana-Resume.pdf`,
     note: 'The resume download is connected to your uploaded PDF in public/resume/Nana-Resume.pdf.',
   },
   // Edit section headings and short supporting text here.
@@ -307,8 +309,8 @@ export const portfolio = {
           'The BERT-based classifier achieved strong overall performance, supporting scalable automated analysis of privacy policy disclosures.',
         ],
         deliverables: [
-          { label: 'Read manuscript', href: '/thesis/Manuscript-Spring-2026-Thesis.pdf' },
-          { label: 'View defense slides', href: '/thesis/Thesis-Defense.pptx' },
+          { label: 'Read manuscript', href: `${baseUrl}thesis/Manuscript-Spring-2026-Thesis.pdf` },
+          { label: 'View defense slides', href: `${baseUrl}thesis/Thesis-Defense.pptx` },
         ],
         visuals: [
           {
