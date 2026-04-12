@@ -205,6 +205,54 @@ export const portfolio = {
       ],
     },
   ],
+  leadershipPage: {
+    eyebrow: 'Leadership Skills',
+    title: 'Leadership, service, and extracurricular involvement.',
+    description:
+      'This page highlights the leadership and service roles I have held across student, graduate, and community organizations. Each entry is set up with space for duties and achievements so it stays easy to expand later.',
+    roles: [
+      {
+        title: 'President',
+        organization: 'DESAG-UCC',
+        period: '2019 to 2021',
+        location: '',
+        duties: ['Add leadership duties here.'],
+        achievements: ['Add key achievements here.'],
+      },
+      {
+        title: 'Financial Secretary',
+        organization: 'DESAG-UCC',
+        period: '2018 to 2019',
+        location: 'Greater Accra',
+        duties: ['Add finance and administrative duties here.'],
+        achievements: ['Add measurable achievements here.'],
+      },
+      {
+        title: 'Treasurer',
+        organization: 'GSGA - Appalachian State University',
+        period: '2024 to 2025',
+        location: '',
+        duties: ['Add treasury and budgeting duties here.'],
+        achievements: ['Add impact and accomplishments here.'],
+      },
+      {
+        title: 'MSADA Senator',
+        organization: 'GSGA - Appalachian State University',
+        period: '2025 to 2026',
+        location: '',
+        duties: ['Add senator responsibilities here.'],
+        achievements: ['Add representation outcomes here.'],
+      },
+      {
+        title: 'Member',
+        organization: 'IntApp (International Appalachian)',
+        period: '',
+        location: '',
+        duties: ['Add participation and support activities here.'],
+        achievements: ['Add contributions or involvement highlights here.'],
+      },
+    ],
+  },
   // Everything below powers the separate /projects page.
   projectPage: {
     title: 'Case studies, research, and project work.',
@@ -507,6 +555,7 @@ export const navLinks = [
   { label: 'About', sectionId: 'about' },
   { label: 'Skills', sectionId: 'skills' },
   { label: 'Projects', href: '/projects', isRoute: true },
+  { label: 'Leadership', href: '/leadership-skills', isRoute: true },
   { label: 'Resume', sectionId: 'resume' },
   { label: 'Contact', sectionId: 'contact' },
 ];
